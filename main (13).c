@@ -344,7 +344,175 @@ void TIM16_IRQHandler(void)
 	HAL_TIM_IRQHandler(&htim16);
 
 	// TODO: Change LED pattern
-	// print something
+	{
+	if ((currentPattern == 1))
+		{
+		  LL_GPIO_SetOutputPin(LED0_GPIO_Port, LED0_Pin);
+
+		  LL_GPIO_SetOutputPin(LED1_GPIO_Port, LED1_Pin);
+
+		  LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+		  LL_GPIO_ResetOutputPin(LED3_GPIO_Port, LED3_Pin);
+
+		  LL_GPIO_SetOutputPin(LED4_GPIO_Port, LED4_Pin);
+
+		  LL_GPIO_ResetOutputPin(LED5_GPIO_Port, LED5_Pin);
+
+		  LL_GPIO_ResetOutputPin(LED6_GPIO_Port, LED6_Pin);
+
+		  LL_GPIO_SetOutputPin(LED7_GPIO_Port, LED7_Pin);
+		  currentPattern = 2;
+		}
+	else if (currentPattern == 2){
+	  LL_GPIO_SetOutputPin(LED0_GPIO_Port, LED0_Pin);
+
+	  LL_GPIO_SetOutputPin(LED1_GPIO_Port, LED1_Pin);
+
+	  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+	  LL_GPIO_SetOutputPin(LED3_GPIO_Port, LED3_Pin);
+
+	  LL_GPIO_ResetOutputPin(LED4_GPIO_Port, LED4_Pin);
+
+	  LL_GPIO_ResetOutputPin(LED5_GPIO_Port, LED5_Pin);
+
+	  LL_GPIO_SetOutputPin(LED6_GPIO_Port, LED6_Pin);
+
+	  LL_GPIO_ResetOutputPin(LED7_GPIO_Port, LED7_Pin);
+	  currentPattern = 3;
+
+	}
+	else if (currentPattern == 3){
+	  LL_GPIO_SetOutputPin(LED0_GPIO_Port, LED0_Pin);
+
+	  LL_GPIO_ResetOutputPin(LED1_GPIO_Port, LED1_Pin);
+
+	  LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+	  LL_GPIO_ResetOutputPin(LED3_GPIO_Port, LED3_Pin);
+
+	  LL_GPIO_ResetOutputPin(LED4_GPIO_Port, LED4_Pin);
+
+	  LL_GPIO_SetOutputPin(LED5_GPIO_Port, LED5_Pin);
+
+	  LL_GPIO_ResetOutputPin(LED6_GPIO_Port, LED6_Pin);
+
+	  LL_GPIO_ResetOutputPin(LED7_GPIO_Port, LED7_Pin);
+	  currentPattern = 4;
+
+	}
+	else if (currentPattern == 4){
+		  LL_GPIO_ResetOutputPin(LED0_GPIO_Port, LED0_Pin);
+
+		  LL_GPIO_SetOutputPin(LED1_GPIO_Port, LED1_Pin);
+
+		  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+		  LL_GPIO_ResetOutputPin(LED3_GPIO_Port, LED3_Pin);
+
+		  LL_GPIO_SetOutputPin(LED4_GPIO_Port, LED4_Pin);
+
+		  LL_GPIO_ResetOutputPin(LED5_GPIO_Port, LED5_Pin);
+
+		  LL_GPIO_ResetOutputPin(LED6_GPIO_Port, LED6_Pin);
+
+		  LL_GPIO_ResetOutputPin(LED7_GPIO_Port, LED7_Pin);
+		  currentPattern = 5;
+
+	}
+	else if (currentPattern == 5){
+			  LL_GPIO_SetOutputPin(LED0_GPIO_Port, LED0_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED1_GPIO_Port, LED1_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+			  LL_GPIO_SetOutputPin(LED3_GPIO_Port, LED3_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED4_GPIO_Port, LED4_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED5_GPIO_Port, LED5_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED6_GPIO_Port, LED6_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED7_GPIO_Port, LED7_Pin);
+			  currentPattern = 6;
+	}
+	else if (currentPattern == 6){
+			  LL_GPIO_ResetOutputPin(LED0_GPIO_Port, LED0_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED1_GPIO_Port, LED1_Pin);
+
+			  LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED3_GPIO_Port, LED3_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED4_GPIO_Port, LED4_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED5_GPIO_Port, LED5_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED6_GPIO_Port, LED6_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED7_GPIO_Port, LED7_Pin);
+			  currentPattern = 7;
+	}
+	else if (currentPattern == 7){
+			  LL_GPIO_ResetOutputPin(LED0_GPIO_Port, LED0_Pin);
+
+			  LL_GPIO_SetOutputPin(LED1_GPIO_Port, LED1_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED3_GPIO_Port, LED3_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED4_GPIO_Port, LED4_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED5_GPIO_Port, LED5_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED6_GPIO_Port, LED6_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED7_GPIO_Port, LED7_Pin);
+			  currentPattern = 8;
+	}
+	else if (currentPattern == 8){
+			  LL_GPIO_SetOutputPin(LED0_GPIO_Port, LED0_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED1_GPIO_Port, LED1_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED3_GPIO_Port, LED3_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED4_GPIO_Port, LED4_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED5_GPIO_Port, LED5_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED6_GPIO_Port, LED6_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED7_GPIO_Port, LED7_Pin);
+			  currentPattern = 9;
+	}
+	else if (currentPattern == 9){
+			  LL_GPIO_ResetOutputPin(LED0_GPIO_Port, LED0_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED1_GPIO_Port, LED1_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED3_GPIO_Port, LED3_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED4_GPIO_Port, LED4_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED5_GPIO_Port, LED5_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED6_GPIO_Port, LED6_Pin);
+
+			  LL_GPIO_ResetOutputPin(LED7_GPIO_Port, LED7_Pin);
+			  currentPattern = 1;
+	}
+
+	}
 
   
 }
