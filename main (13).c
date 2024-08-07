@@ -44,6 +44,7 @@ TIM_HandleTypeDef htim16;
 
 /* USER CODE BEGIN PV */
 // TODO: Define input variables
+int CurrentPattern = 1;
 
 
 /* USER CODE END PV */
