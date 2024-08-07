@@ -107,6 +107,20 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
     // TODO: Check pushbuttons to change timer delay
+	  if (!LL_GPIO_IsInputPinSet(Button0_GPIO_Port, Button0_Pin)){
+
+	  __HAL_TIM_SET_AUTORELOAD(&htim16, 499); // 0.5 second
+	}
+	else if (!LL_GPIO_IsInputPinSet(Button1_GPIO_Port, Button1_Pin)){
+
+	  __HAL_TIM_SET_AUTORELOAD(&htim16, 1999);} // 2 seconds
+	else if (!LL_GPIO_IsInputPinSet(Button2_GPIO_Port, Button2_Pin)){
+
+	  __HAL_TIM_SET_AUTORELOAD(&htim16, 999);} // 1 second
+	else if (!LL_GPIO_IsInputPinSet(Button3_GPIO_Port, Button3_Pin))
+	{
+		currentPattern = 1;// Reset to pattern 1
+	}
 	  
     
     
