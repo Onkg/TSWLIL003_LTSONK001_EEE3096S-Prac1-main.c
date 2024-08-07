@@ -92,6 +92,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   // TODO: Start timer TIM16
+ // Starting the timer in interrupt mode, and the error handler function will be used for when the timer is not successful 
 	  if (HAL_TIM_Base_Start_IT(&htim16) != HAL_OK)
   {
           Error_Handler();
@@ -344,6 +345,7 @@ void TIM16_IRQHandler(void)
 	HAL_TIM_IRQHandler(&htim16);
 
 	// TODO: Change LED pattern
+	// As the currentPattern variable increases there will be different patterns 
 	{
 	if ((currentPattern == 1))
 		{
@@ -511,10 +513,7 @@ void TIM16_IRQHandler(void)
 			  LL_GPIO_ResetOutputPin(LED7_GPIO_Port, LED7_Pin);
 			  currentPattern = 1;
 	}
-
 	}
-
-  
 }
 
 /* USER CODE END 4 */
