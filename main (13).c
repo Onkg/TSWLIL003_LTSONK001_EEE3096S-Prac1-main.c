@@ -92,7 +92,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   // TODO: Start timer TIM16
-
+	  if (HAL_TIM_Base_Start_IT(&htim16) != HAL_OK)
+  {
+          Error_Handler();
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,6 +107,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
     // TODO: Check pushbuttons to change timer delay
+	  
     
     
 
