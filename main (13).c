@@ -44,6 +44,7 @@ TIM_HandleTypeDef htim16;
 
 /* USER CODE BEGIN PV */
 // TODO: Define input variables
+//input varibale to keep track of pattern
 int CurrentPattern = 1;
 
 
@@ -108,6 +109,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
     // TODO: Check pushbuttons to change timer delay
+	  // check if button has been pressed if it has been set assign a ARR value for the delay needed when that button is pressed
 	  if (!LL_GPIO_IsInputPinSet(Button0_GPIO_Port, Button0_Pin)){
 
 	  __HAL_TIM_SET_AUTORELOAD(&htim16, 499); // 0.5 second
@@ -120,6 +122,7 @@ int main(void)
 	  __HAL_TIM_SET_AUTORELOAD(&htim16, 999);} // 1 second
 	else if (!LL_GPIO_IsInputPinSet(Button3_GPIO_Port, Button3_Pin))
 	{
+		// when button 3 is pressed just reset the pattern to the first one
 		currentPattern = 1;// Reset to pattern 1
 	}
 	  
